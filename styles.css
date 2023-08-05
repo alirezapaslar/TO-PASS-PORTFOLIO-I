@@ -218,21 +218,21 @@ a:hover {
     }
 
     .square {
-        width: 768px; /* Adjust based on your needs */
-        height: 768px; /* This should be equal to the width to make it a square */
-        border: 1px solid #000; /* Change color as needed */
-        box-sizing: border-box; /* This includes the border in the element's total width and height */
-        overflow: hidden; /* This will crop the image */
-        display: flex; /* These two lines will center the image and text inside the squares */
+        width: 768px; 
+        height: 768px;  
+        border: 1px solid #000; 
+        box-sizing: border-box; 
+        overflow: hidden; 
+        display: flex;
         align-items: center;
         justify-content: center;
-        margin: 10px; /* This will add some space between the squares */
+        margin: 10px; 
         padding: 20px;
         text-align: center;
     }
 
     .home-logo img {
-        object-fit: cover; /* This will cover the whole square */
+        object-fit: cover; 
         height: 100%;
         width: 100%;
 
@@ -240,3 +240,48 @@ a:hover {
             .home-container {
                 flex-direction: column;
             }
+
+
+
+/* CRITERIA */
+.criteria-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.criteria-logo, .criteria-description {
+    width: 100%;
+    margin: 20px 0;
+    box-sizing: border-box; 
+    overflow: hidden; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+}
+
+.criteria-logo img {
+    object-fit: cover; 
+    height: 100%;
+    width: 100%;
+}
+
+@media (max-width: 650px) {
+    .criteria-container {
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 768px) {
+    .criteria-container {
+        flex-direction: row;
+    }
+
+    .criteria-logo, .criteria-description {
+        width: calc(50% - 10px);  /* This will create 2 boxes in a row, minus 10px for margin */
+        margin: 5px;  /* Add some space around each box */
+    }
+}
