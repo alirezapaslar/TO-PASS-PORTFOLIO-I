@@ -9,13 +9,13 @@ Due to lack of time I intentionally chose to go minimal with all designs and tex
 ## Pages
 ### Homepage
 The homepage of the website provides an overview of the website and its purpose. It also includes links to the other two pages: Form and Criteria.
-
+![Screenshot of the homepage](./Media/home screen.png)
 ### Form
 The Form page is a simple contact form that allows users to submit their name, email address, phone number, and message. The form is submitted to a cloud platform, and the submitted information is displayed on the Criteria page.
-
+![Screenshot of the form page](./Media/form screen.png)
 ### Criteria
 The Criteria page describes how the website meets all of the pass criteria for the Portfolio 1 Assessment.
-
+![Screenshot of the criteria page](./Media/criteria screem.png)
 ## Errors
 All identified errors in HTML and CSS codes are fixed according to comments of https://jigsaw.w3.org/css-validator/ and https://validator.w3.org/#validate_by_input
 
