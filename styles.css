@@ -1,4 +1,6 @@
 /* HEADER */
+
+
 header {
     position: fixed;
     top: 0;
@@ -26,7 +28,9 @@ header a:not(:last-child)::after {
     margin-left: 10px;
 }
 
+
 /* FOOTER */
+
 
 .footer {
     position: fixed;
@@ -76,8 +80,38 @@ header a:not(:last-child)::after {
     white-space: nowrap;
 }
 
+
 /* all links to be underlined */
 
 a:hover {
     text-decoration: underline;
+}
+
+.home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.home-logo, .list-container {
+    width: 80%;
+    margin: 20px 0;
+}
+
+.list-container ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    text-align: justify;
+    line-height: 2;
+}
+
+@media (min-width: 768px) {
+    .home-container {
+        flex-direction: row;
+    }
+    
+    .home-logo, .list-container {
+        width: 40%;
+    }
 }
