@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <link rel="stylesheet" type="text/css" href="styles.css">
-    <script title="oNlineWebFonts" src="https://db.onlinewebfonts.com/animations/icons/567196.js"
-        type="text/javascript"></script>
+    <script title="oNlineWebFonts" src="https://db.onlinewebfonts.com/animations/icons/567196.js" type="text/javascript"></script>
 </head>
 
 
@@ -29,30 +28,54 @@
     <!-- FORM PAGE CONTENT -->
     <div class="form-container">
         <div class="form-logo square">
-            <img src="https://images.pexels.com/photos/3760067/pexels-photo-3760067.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                alt="Form Image">
+            <img src="https://images.pexels.com/photos/3760067/pexels-photo-3760067.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Form Image">
         </div>
         <div class="contact-form square">
 
-            <form class="contact-form">
+            <form class="contact-form" id="contact-form">
                 <label for="name">Name</label>
+                <p>The full name as you'd like it to appear. Must consist of alphanumeric characters.</p>
                 <input type="text" id="name" name="name" required>
 
                 <label for="email">Email</label>
+                <p>A valid email address.</p>
                 <input type="email" id="email" name="email" required>
 
                 <label for="phone">Phone</label>
+                <p>A phone number in the format XXX-XXX-XXXX.</p>
                 <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
 
                 <label for="message">Message</label>
+                <p>A brief message or inquiry.</p>
                 <textarea id="message" name="message" required></textarea>
 
                 <input type="submit" value="Submit">
             </form>
         </div>
+        <div id="form-results"></div>
     </div>
 
-
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault(); // Prevent the form from submitting and reloading the page
+    
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var phone = document.getElementById('phone').value;
+            var message = document.getElementById('message').value;
+    
+            var results = `
+                <h3>Your Submitted Information:</h3>
+                <p><strong>Name:</strong> ${name}</p>
+                <p><strong>Email:</strong> ${email}</p>
+                <p><strong>Phone:</strong> ${phone}</p>
+                <p><strong>Message:</strong> ${message}</p>
+            `;
+    
+            document.getElementById('form-results').innerHTML = results;
+        });
+    </script>
+    
     <!-- EMPTY DIV -->
     <div class="spacer"></div>
 
@@ -60,15 +83,9 @@
     <footer>
         <div class="footer">
             <div class="social-media-row">
-                <a href="https://www.facebook.com" target="_blank"><img
-                        src="https://upload.wikimedia.org/wikipedia/commons/9/9b/Font_Awesome_5_brands_facebook-square.svg"
-                        alt="Facebook Logo" /></a>
-                <a href="https://www.twitter.com" target="_blank"><img
-                        src="https://upload.wikimedia.org/wikipedia/commons/c/cf/Font_Awesome_5_brands_Twitter_square.svg"
-                        alt="Twitter Logo" /></a>
-                <a href="https://www.instagram.com" target="_blank"><img
-                        src="https://upload.wikimedia.org/wikipedia/commons/1/18/Font_Awesome_5_brands_Instagram_square.svg"
-                        alt="Instagram Logo" /></a>
+                <a href="https://www.facebook.com" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/9/9b/Font_Awesome_5_brands_facebook-square.svg" alt="Facebook Logo" /></a>
+                <a href="https://www.twitter.com" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/Font_Awesome_5_brands_Twitter_square.svg" alt="Twitter Logo" /></a>
+                <a href="https://www.instagram.com" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/1/18/Font_Awesome_5_brands_Instagram_square.svg" alt="Instagram Logo" /></a>
             </div>
             <div class="website-link-row">
                 <div class="website-link-row">
@@ -76,16 +93,3 @@
                     </a>&nbsp;
                     in 4 hours on 05/08/2023
                 </div>
-            </div>
-        </div>
-    </footer>
-
-    OnlineWebFonts_Com({
-    'Id':'.div',
-    'Data':__Animations['567196'],
-    }).Play();
-
-
-</body>
-
-</html>
