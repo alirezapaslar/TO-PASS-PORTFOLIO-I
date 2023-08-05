@@ -2,8 +2,9 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" type="text/css" href="styles.css">
-    <script title="oNlineWebFonts" src="https://db.onlinewebfonts.com/animations/icons/567196.js" type="text/javascript"></script>
+    <title>Paslar's Potfolio 1 passer</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<script title="oNlineWebFonts" src="https://db.onlinewebfonts.com/animations/icons/567196.js"></script>
 </head>
 
 
@@ -28,7 +29,8 @@
     <!-- FORM PAGE CONTENT -->
     <div class="form-container">
         <div class="form-logo square">
-            <img src="https://images.pexels.com/photos/3760067/pexels-photo-3760067.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Form Image">
+            <img src="https://images.pexels.com/photos/3760067/pexels-photo-3760067.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                alt="Form Image">
         </div>
         <div class="contact-form square">
 
@@ -56,14 +58,14 @@
     </div>
 
     <script>
-        document.getElementById('contact-form').addEventListener('submit', function(e) {
+        document.getElementById('contact-form').addEventListener('submit', function (e) {
             e.preventDefault(); // Prevent the form from submitting and reloading the page
-    
+
             var name = document.getElementById('name').value;
             var email = document.getElementById('email').value;
             var phone = document.getElementById('phone').value;
             var message = document.getElementById('message').value;
-    
+
             var results = `
                 <h3>Your Submitted Information:</h3>
                 <p><strong>Name:</strong> ${name}</p>
@@ -71,11 +73,11 @@
                 <p><strong>Phone:</strong> ${phone}</p>
                 <p><strong>Message:</strong> ${message}</p>
             `;
-    
+
             document.getElementById('form-results').innerHTML = results;
         });
     </script>
-    
+
     <!-- EMPTY DIV -->
     <div class="spacer"></div>
 
@@ -83,9 +85,15 @@
     <footer>
         <div class="footer">
             <div class="social-media-row">
-                <a href="https://www.facebook.com" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/9/9b/Font_Awesome_5_brands_facebook-square.svg" alt="Facebook Logo" /></a>
-                <a href="https://www.twitter.com" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/Font_Awesome_5_brands_Twitter_square.svg" alt="Twitter Logo" /></a>
-                <a href="https://www.instagram.com" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/1/18/Font_Awesome_5_brands_Instagram_square.svg" alt="Instagram Logo" /></a>
+                <a href="https://www.facebook.com" target="_blank"><img
+                        src="https://upload.wikimedia.org/wikipedia/commons/9/9b/Font_Awesome_5_brands_facebook-square.svg"
+                        alt="Facebook Logo"></a>
+                <a href="https://www.twitter.com" target="_blank"><img
+                        src="https://upload.wikimedia.org/wikipedia/commons/c/cf/Font_Awesome_5_brands_Twitter_square.svg"
+                        alt="Twitter Logo"></a>
+                <a href="https://www.instagram.com" target="_blank"><img
+                        src="https://upload.wikimedia.org/wikipedia/commons/1/18/Font_Awesome_5_brands_Instagram_square.svg"
+                        alt="Instagram Logo"></a>
             </div>
             <div class="website-link-row">
                 <div class="website-link-row">
@@ -93,3 +101,11 @@
                     </a>&nbsp;
                     in 4 hours on 05/08/2023
                 </div>
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>
